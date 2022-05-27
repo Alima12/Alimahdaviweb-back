@@ -24,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q4)j&(sab(6deqgtc$*z&9-hd5fu5aqfavpr*j(zj&u5o#@atu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://alimahdavimehr.ir",
+]
 
 
 # Application definition
@@ -139,6 +141,6 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:8081",
-
+    "https://alimahdavimehr.ir"
     "http://127.0.0.1:8080",
 ]
