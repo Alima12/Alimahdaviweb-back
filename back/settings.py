@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q4)j&(sab(6deqgtc$*z&9-hd5fu5aqfavpr*j(zj&u5o#@atu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://alimahdavimehr.ir",
+    "*"
 ]
 
 
