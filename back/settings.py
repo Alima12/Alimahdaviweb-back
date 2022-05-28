@@ -85,7 +85,13 @@ WSGI_APPLICATION = 'back.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'AliMahdaviWeb',
+        'NAME': 'admin',
+        'CLIENT': {
+                'host': '142.132.152.237',
+                'port': 32698,
+                'username': 'admin',
+                'password': 'rytslwkds39vlhv',
+            },
     }
 }
 
@@ -141,6 +147,6 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:8081",
-    "https://alimahdavimehr.ir"
+    "https://alimahdavimehr.ir",
     "http://127.0.0.1:8080",
 ]
