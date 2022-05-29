@@ -144,12 +144,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "http://localhost:8081",
-    "http://alimahdavimehr.ir",
-    "https://alimahdavimehr.ir",
-
-    "http://127.0.0.1:8080",
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8080",
+#     "http://localhost:8081",
+#     "http://alimahdavimehr.ir",
+#     "https://alimahdavimehr.ir",
+#
+#     "http://127.0.0.1:8080",
+# ]
