@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Sample
+from .models import Sample, IDo, Skills
 
 admin.site.register(Sample)
-# Register your models here.
+admin.site.register(IDo)
+admin.site.register(Skills)
