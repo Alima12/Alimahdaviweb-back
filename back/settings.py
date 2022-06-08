@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     "general.apps.GeneralConfig",
     "sampleworks.apps.SampleworksConfig",
+    "bot.apps.BotConfig",
+
 ]
 
 MIDDLEWARE = [
