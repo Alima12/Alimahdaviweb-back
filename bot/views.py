@@ -1,9 +1,10 @@
 from rest_framework.views import APIView
 import json
 from telegram.ext import Dispatcher, MessageHandler, Filters
-from telegram import Update
+from telegram import Update, Bot
+from django.http.response import JsonResponse
 
-bot = Bot(token="--INSERT YOUR BOT TOKEN HERE--")
+bot = Bot(token="5515102830:AAFSh_McX1ah0kdpBGDyM40qRmQZtHNEhnc")
 dispatcher = Dispatcher(bot, None, use_context=True)
 
 
@@ -28,5 +29,10 @@ def receive_messages(request, event=None):
             return {"statusCode": 500}
 
         return {"statusCode": 200}
+    else:
+        return JsonResponse({
+            "status":500,
+            "msg": "Get method was not allowed"
+        })
 
 
