@@ -16,7 +16,7 @@ def echo(update, context):
     context.bot.send_message(chat_id=chat_id, text="Message from " + str(chat_user.first_name) + ": \n " + chat_text)
 
 
-def receive_messages(request):
+def receive_messages(request, *args, **kwargs):
     # print(request)
     data = request.POST
     str_data = json.dumps(data)
