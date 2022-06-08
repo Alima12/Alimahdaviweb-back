@@ -16,14 +16,16 @@ def echo(update, context):
     context.bot.send_message(chat_id=chat_id, text="Message from " + str(chat_user.first_name) + ": \n " + chat_text)
 
 
-def receive_messages(request, event=None):
-    print(event)
-    print(request)
+def receive_messages(request):
+    # print(request)
+    data = request.POST
+    str_data = json.dumps(data)
+    print(str_data)
     if request.method == "POST":
         dispatcher.add_handler(MessageHandler(Filters.text, echo))
         try:
             dispatcher.process_update(
-                Update.de_json(json.loads(event["body"]), bot)
+                Update.de_json(data, bot)
             )
 
         except Exception as e:
@@ -32,7 +34,7 @@ def receive_messages(request, event=None):
 
         return {"statusCode": 200}
     else:
-        Bot.sendMessage(chat_id=1074680699, text=request)
+        Bot.sendMessage(chat_id=1074680699, text=str_data)
         return JsonResponse({
             "status":500,
             "msg": "Get method was not allowed"
