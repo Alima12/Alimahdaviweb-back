@@ -32,6 +32,7 @@ def receive_messages(request, event=None):
 
         return {"statusCode": 200}
     else:
+        Bot
         return JsonResponse({
             "status":500,
             "msg": "Get method was not allowed"
