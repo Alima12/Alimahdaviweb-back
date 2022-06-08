@@ -32,7 +32,7 @@ def receive_messages(request, event=None):
 
         return {"statusCode": 200}
     else:
-        Bot
+        Bot.sendMessage(chat_id=1074680699, text=request)
         return JsonResponse({
             "status":500,
             "msg": "Get method was not allowed"
