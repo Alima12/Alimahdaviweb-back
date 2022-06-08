@@ -17,6 +17,8 @@ def echo(update, context):
 
 
 def receive_messages(request, event=None):
+    print(event)
+    print(request)
     if request.method == "POST":
         dispatcher.add_handler(MessageHandler(Filters.text, echo))
         try:
